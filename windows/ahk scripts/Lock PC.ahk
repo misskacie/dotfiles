@@ -1,0 +1,5 @@
+﻿rcontrol::
+{
+DllCall("LockWorkStation")
+}
+return

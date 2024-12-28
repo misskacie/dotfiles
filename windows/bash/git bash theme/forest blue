@@ -1,0 +1,27 @@
+BackgroundColour= #0D3842
+ForegroundColour= #E2D8CD
+CursorColour    = #9E9ECB
+
+Black           = #333333
+BoldBlack       = #3D3D3D
+
+Red             = #F8818E
+BoldRed         = #FB3D66
+
+Green           = #92D3A2
+BoldGreen       = #6BB48D
+
+Yellow          = #1A8E63
+BoldYellow      = #30C85A
+
+Blue            = #8ED0CE
+BoldBlue        = #39A7A2
+
+Magenta         = #B384F5
+BoldMagenta     = #C19DFF
+
+Cyan            = #31658C
+BoldCyan        = #6096BF
+
+White           = #E2D8CD
+BoldWhite       = #E2D8CD

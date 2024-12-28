@@ -1,0 +1,109 @@
+{
+  "modules-left": ["sway/workspaces", "sway/mode"],
+  "modules-center": ["clock"],
+  "modules-right": ["pulseaudio", "backlight", "network", "cpu", "battery", "privacy","tray"],
+  "clock": {
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "format": "{:%A %d %B %H:%M  󰃰} "
+  },
+  "backlight": {
+    "format": "{percent}% {icon}",
+    "format-icons": ["", "", "", "", "", "", "", "", ""],
+    "on-scroll-up": "brightnessctl set 5%+",
+    "on-scroll-down": "brightnessctl  set 5%-"
+  },
+  "battery": {
+    "interval": 5,
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{capacity}% {icon}    {power} W",
+    "format-charging": "{capacity}% 󰢝",
+    "format-plugged": "{capacity}% ",
+    "format-alt": "{time}  {capacity}% {icon}    {power} W",
+    "format-icons": ["", "", "", "", ""]
+  },
+  "pulseaudio": {
+    "format": "{volume}% {icon}",
+    "format-bluetooth": "{volume}% {icon}",
+    "format-bluetooth-muted": "{icon}",
+    "format-muted": "󰝟",
+    "format-source": "{volume}%",
+    "format-source-muted": "",
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "󱠰",
+      "headset": "󰋎",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["", "", ""]
+    },
+    "on-click": "pavucontrol"
+  },
+  "network": {
+    "format": "{ifname}",
+    "format-wifi": "{essid} ",
+    "format-ethernet": "{ipaddr}/{cidr} 󰈀",
+    "format-disconnected": "Disconnected 󱛅", //An empty format will hide the module.
+    "tooltip-format": "{ifname} via {gwaddr} 󰛳",
+    "tooltip-format-wifi": "Signal Strength {signalStrength}%",
+    "tooltip-format-ethernet": "{ifname} ",
+    "tooltip-format-disconnected": "Disconnected",
+    "max-length": 50
+  },
+  "sway/workspaces": {
+    "disable-scroll": true,
+    "enable-bar-scroll": true,
+    "disable-scroll-wraparound": true,
+    "smooth-scrolling-threshold": 1
+  },
+  "privacy": {
+	"icon-spacing": 4,
+	"icon-size": 18,
+	"transition-duration": 250,
+	"modules": [
+		{
+			"type": "screenshare",
+			"tooltip": true,
+			"tooltip-icon-size": 24
+		},
+		{
+			"type": "audio-out",
+			"tooltip": true,
+			"tooltip-icon-size": 24
+		},
+		{
+			"type": "audio-in",
+			"tooltip": true,
+			"tooltip-icon-size": 24
+		}
+	]
+},
+"bluetooth": {
+  "format": " {status}",
+	"format-disabled": "", // an empty format will hide the module
+	"format-connected": " {num_connections} connected",
+	"tooltip-format": "{controller_alias}\t{controller_address}",
+	"tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+	"tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
+},
+"cpu": {
+    "interval": 10,
+    "format": "{}% ",
+    "max-length": 10
+},
+"temperature": {
+  // "thermal-zone": 2,
+  // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+  // "critical-threshold": 80,
+  // "format-critical": "{temperatureC}°C ",
+  "format": "{temperatureC}°C "
+},
+"tray": {
+	"icon-size": 21,
+	"spacing": 10
+}
+}
+

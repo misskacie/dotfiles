@@ -1,0 +1,5 @@
+##### AUTOSTART #####
+exec mount /dev/sda2 /mnt/data
+exec sway-audio-idle-inhibit
+xwayland enable
+

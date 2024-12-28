@@ -1,0 +1,49 @@
+window {
+    opacity: 1;
+    border:  0px;
+    border-radius: 1px;
+    font-family: monospace;
+    font-size: 18px;
+}
+
+#input {
+	border-radius: 10px 10px 0px 0px;
+    border:  0px;
+    padding: 10px;
+    margin: 0px;
+    font-size: 28px;
+	color: #8EC07C;
+	background-color: #000000;
+}
+
+#inner-box {
+	margin: 0px;
+	color: @base06;
+	background-color: #282828;
+}
+
+#outer-box {
+	margin: 0px;
+	background-color: #000000;
+    border-radius: 1px;
+}
+
+#selected {
+	background-color: #608787;
+}
+
+#entry {
+	padding: 0px;
+    margin: 0px;
+	background-color: @base00;
+}
+
+#scroll {
+	margin: 5px;
+	background-color: @base00;
+}
+
+#text {
+	margin: 0px;
+	padding: 2px 2px 2px 10px;
+}

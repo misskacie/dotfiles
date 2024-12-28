@@ -1,0 +1,45 @@
+##### Output configuration #####
+# You can get the names of your outputs by running: swaymsg -t get_outputs
+set $output-primary 'Dell Inc. DELL U2518D FG67D7AI027L'
+set $output-secondary 'Dell Inc. DELL U2520D 4BBV823' 
+set $output-tertiary 'Dell Inc. DELL P2417H NPNRT7244M4S'
+set $background '~/.config/sway/wallpaper/surendra-rajawat-natures-beauty.png'
+
+output * bg $background fill
+output $output-primary pos 0 1080  
+output $output-secondary pos 2560 1080
+output $output-tertiary pos 2880 0
+
+workspace 1 output $output-primary
+workspace 3 output $output-primary
+workspace 5 output $output-primary
+workspace 7 output $output-primary
+workspace 9 output $output-primary
+
+workspace 2 output $output-secondary
+workspace 4 output $output-secondary
+workspace 6 output $output-secondary
+workspace 8 output $output-secondary
+
+workspace 10 output $output-tertiary
+
+##### Input configuration #####
+#   input "2:14:SynPS/2_Synaptics_TouchPad" {
+#       dwt enabled
+#       tap enabled
+#       natural_scroll enabled
+#       middle_emulation enabled
+#   }
+
+input 'Logitech G502 HERO Gaming Mouse' {
+	accel_profile "flat"
+	pointer_accel 1
+
+}
+
+input "type:keyboard" {
+  xkb_options caps:escape,grp:shifts_toggle
+  xkb_layout us,us
+  xkb_variant ,intl
+}
+#swapescape
