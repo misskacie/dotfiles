@@ -1,3 +1,31 @@
 ##### VISUAL #####
-default_border pixel 2
+    font pango:Hack Nerd Font Bold 9
+    smart_gaps on
+    gaps inner 0
+    gaps outer 0
+    gaps top 0
+    gaps bottom 0
+    default_border pixel 2
+    default_floating_border pixel 1
+
+    ### Gruvbox
+    set $light #ffffff
+    set $dark #3c3836
+    set $focused #ea76cb
+    set $inactive #282828
+    set $unfocused #282828
+    set $urgent #b8bb26
+
+    ### Colors (see man 5 sway)
+    # border - border around titlebar
+    # bg - titlebar background
+    # text - text on titlebar
+    # indicator - shown where new window will open
+    # child_border - border around the window
+    # class         border      bg      text    indicator   child_border
+    client.focused          $focused    $focused    $light   $focused    $focused
+    client.focused_inactive $inactive   $inactive   $light   $inactive   $inactive
+    client.unfocused        $unfocused  $unfocused  $light  $unfocused  $unfocused
+    client.urgent           $urgent     $urgent     $light  $urgent     $urgent
+
 bar swaybar_command waybar
